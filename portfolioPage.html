@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e4c8b0f2d7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="style.css" rel="stylesheet" />
+
+    <title>Portfolio Page</title>
+  </head>
+  <body>
+    <a name="top"></a>
+
+    <!-- navbar -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#top" class="brand-logo" style="font-size: 3vw">SW</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a style="font-size: 1vw" href="#top">Home</a></li>
+            <li><a style="font-size: 1vw" href="#about">About Me</a></li>
+            <li><a style="font-size: 1vw" href="#project">Projects</a></li>
+            <li><a style="font-size: 1vw" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- landing page -->
+    <div class="container landing" id="home">
+      <div class="row">
+        <div class="col s7 pic">
+          <img
+            class="center-align bgpicture responsive-img"
+            src="./Images/pcpicture.jpg"
+            alt="laptop with screen"
+          />
+        </div>
+        <div class="col s4 lptitle">
+          <h2 style="font-size: 4vw">
+            Hi, I'm Simon, a Full Stack Web Developer based in New York City.
+          </h2>
+        </div>
+      </div>
+      <div class="row lpbanner">
+        <div class="col s4 z-depth-4 banner1"></div>
+        <div class="col s4 z-depth-4 banner2"></div>
+        <div class="col s4 z-depth-4 banner3"></div>
+      </div>
+    </div>
+
+    <main>
+      <!-- about page -->
+      <div class="container" id="about" data-aos="fade-left">
+        <div class="row">
+          <h2 class="col s12 aboutTitle">About Me</h2>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <img
+              class="responsive-img circle z-depth-3"
+              src="./Images/profile.jpg"
+              alt="picture of me and my dog"
+            />
+          </div>
+          <div style="font-size: 1.5vw" class="col s7 about1 z-depth-3">
+            I am an aspiring Full Stack Web Developer with a background in
+            science. I am originally from the UK but currently living in NYC with my wife and our pug, Gus. 
+            <br>
+            I recently graduated from Columbia's Full Stack Web Development bootcamp, where I developed a passion for back end development and database management. 
+            <br>
+            Outside of work, I enjoy gaming, cooking and playing with Gus.
+          </div>
+        </div>
+      </div>
+      <!-- technical skills -->
+      <div class="container tech" data-aos="fade-right">
+        <div class="row">
+          <h2 class="col s12 techTitle">Technical Skills</h2>
+        </div>
+        <div class="row">
+          <div class="col s4 techImg"></div>
+          <div class="col s2"></div>
+          <ul style="font-size: 1.5vw" class="col s5 techSkills z-depth-3">
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+            <li>AJAX</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>React</li>
+            <li>MySQL</li>
+            <li>Sequelize</li>
+            <li>MongoDB</li>
+            <li>Mongoose</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- projects -->
+      <!-- carousel -->
+      <div id="project">
+        <div class="carousel item" data-aos="fade-up">
+          <a
+            class="carousel-item modal-trigger"
+            id="carousel1"
+            onclick="onClickFunc(this.id)"
+            href="#modal1"
+            ><img src="Images/favicon.png" />
+          </a>
+          <a
+            class="carousel-item modal-trigger"
+            id="carousel2"
+            onclick="onClickFunc(this.id)"
+            href="#modal2"
+            ><img src="Images/IMG_1298.JPG" />
+          </a>
+          <a
+            class="carousel-item modal-trigger"
+            id="carousel3"
+            onclick="onClickFunc(this.id)"
+            href="#modal3"
+            ><img src="https://lorempixel.com/250/250/nature/3" />
+          </a>
+        </div>
+
+        <div class="container projCont">
+          <div class="project1">
+            <h4 class="proj1title" style="font-size: 3vw">BetEase</h4>
+            <p class="item">
+              A website focusing on showing current matches and odds for several
+              sports.
+            </p>
+            <p>
+              The website uses several api's to gather the current matches for
+              each sport listed on the current day and searches for the odds
+              that correspond with those matches.
+            </p>
+            <img class="betImage" 
+            src="./Images/BetEase Screenshot (2).png" 
+            alt="betEase home page"
+            />
+            <p>
+              This was a group project involving several people. I focused
+              primarily on utilising the api's to gather the days matches for
+              each of the sports.
+            </p>
+            <img class="betImage" 
+            src="./Images/BetEaseAbout.png" 
+            alt="betEase secondary page"
+            />
+          </div>
+
+          <div class="project2">
+            <h4 class="proj2title" style="font-size: 3vw">Murder Squad</h4>
+            <p class="item">
+              An app that simulates a murder mystery dinner party.
+            </p>
+            <img class="betImage" 
+            src="./Images/ms screenshot.png"
+            alt="murder squad character select" 
+            />
+            <p>
+              The user selects a story to play and a character to play as
+              throughtout the game. You must use your clues and the stories told
+              by other guests to determine who the killer was before the end of
+              the game!
+            </p>
+            <img class="betImage" 
+            src="./Images/ms screenshot 2.png" 
+            alt="murder squad main clues page"
+            />
+            <p >
+              The app uses jquery and the bootstrap and materialize frameworks for the front
+              end while using MySQL for storing, structuring and relating the data
+              on the back end.
+            </p>
+            <img class="betImage" 
+            src="./Images/ms screenshot 3.png" 
+            alt="murder squad accusation page"
+            />
+          </div>
+
+          <div class="project3" id="project3">
+            <!-- project3 -->
+            <h4 class="proj3title" style="font-size: 3vw">Budget Tracker</h4>
+            <p class="item">
+              An app to keep track of the spending of the user.
+            </p>
+            <p>
+              This app tracks a users expenses and deposits, whether they are
+              online or offline, and visualizes the overall expenditure with a
+              graph.
+            </p>
+            <img class="betImage" 
+            src="./Images/bt screenshot.png" 
+            alt="budget tracker graph"/>
+            <p>
+              The app uses jquery and the materialize framework for the front
+              end and uses MySQL for storing, structuring and relating the data
+              on the back end.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- contact -->
+    <footer id="contact">
+      <img class="GHicon" src="./Images/GitHub-Mark-64px.png">
+      <a class="GHlink" style="font-size: 1vw" href="https://github.com/SM91wilson">Github Profile</a>
+      <br>
+      <img class="LIicon" src="./Images/LI-In-Bug.png"/>
+      <a class="LIlink responsive-img" style="font-size: 1vw" href="www.linkedin.com/in/simon-wilson-0b41521a6">LinkedIn Profile</a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="portfolio.js"></script>
+  </body>
+</html>
